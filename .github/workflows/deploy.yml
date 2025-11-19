@@ -22,16 +22,16 @@ jobs:
       - name: Build and push frontend
         uses: docker/build-push-action@v5
         with:
-          context: ./frontend
-          file: ./frontend/Dockerfile
+          context: ./MONITORING-COMPOSE/frontend
+          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/monitoring-frontend:latest
 
       - name: Build and push backend
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
-          file: ./backend/Dockerfile
+          context: ./MONITORING-COMPOSE/backend
+          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/monitoring-backend:latest
 

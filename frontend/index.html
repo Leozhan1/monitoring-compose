@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Metrics</title>
+</head>
+<body>
+    <h1>System Metrics</h1>
+
+    {% if metrics.error %}
+        <p>Error: {{ metrics.error }}</p>
+    {% else %}
+        <ul>
+        {% for item in metrics %}
+            <li>CPU: {{ item.cpu }}%, Memory: {{ item.memory }}%, GPU: {{ item.gpu }}%</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

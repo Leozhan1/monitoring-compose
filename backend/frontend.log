@@ -1,7 +1,0 @@
-2025-11-25 13:06:16,113 - INFO - Frontend Flask server starting...
-2025-11-25 13:06:16,115 - INFO - Starting Flask app on port 8000
-2025-11-25 13:06:16,159 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8000
- * Running on http://145.93.33.60:8000
-2025-11-25 13:06:16,159 - INFO - [33mPress CTRL+C to quit[0m

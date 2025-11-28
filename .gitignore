@@ -1,2 +1,7 @@
 .env
-*.env
+.venv/
+*.log
+__pycache__/
+node_modules/
+build-error.txt
+system.log

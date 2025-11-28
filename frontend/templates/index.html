@@ -1,0 +1,27 @@
+<h1>System Metrics</h1>
+
+<ul>
+    <li><strong>CPU:</strong> {{ metrics.cpu }}%</li>
+    <li><strong>Memory:</strong> {{ metrics.memory }} MB</li>
+    <li><strong>GPU:</strong> {{ metrics.gpu }}</li>
+</ul>
+
+<hr>
+
+<h1>Container Metrics</h1>
+
+{% if containers %}
+    {% for name, stat in containers.items() %}
+        <h3>{{ name }}</h3>
+        <ul>
+            <li>CPU: {{ stat.cpu }}%</li>
+            <li>Memory: {{ stat.memory }} / {{ stat.memory_limit }}</li>
+            <li>Network RX: {{ stat.network_rx }}</li>
+            <li>Network TX: {{ stat.network_tx }}</li>
+            <li>Status: {{ stat.status }}</li>
+        </ul>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>No container metrics available.</p>
+{% endif %}

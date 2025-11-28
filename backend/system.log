@@ -1,0 +1,76 @@
+2025-11-26 10:49:29,708 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://145.93.33.133:5001
+2025-11-26 10:49:29,708 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-26 10:49:56,943 - INFO - Home endpoint accessed
+2025-11-26 10:49:56,944 - INFO - 127.0.0.1 - - [26/Nov/2025 10:49:56] "GET / HTTP/1.1" 200 -
+2025-11-26 10:55:55,536 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://145.93.33.133:5001
+2025-11-26 10:55:55,537 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-26 10:55:57,511 - INFO - Home endpoint accessed
+2025-11-26 10:55:57,512 - INFO - 127.0.0.1 - - [26/Nov/2025 10:55:57] "GET / HTTP/1.1" 200 -
+2025-11-26 10:59:25,252 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://145.93.33.133:5001
+2025-11-26 10:59:25,252 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-26 10:59:29,009 - INFO - Home endpoint accessed
+2025-11-26 10:59:29,010 - INFO - 127.0.0.1 - - [26/Nov/2025 10:59:29] "GET / HTTP/1.1" 200 -
+2025-11-26 10:59:35,273 - INFO - 127.0.0.1 - - [26/Nov/2025 10:59:35] "[33mPOST /%0A%0A%0A%0A%0A%0A HTTP/1.1[0m" 404 -
+2025-11-26 10:59:39,066 - INFO - 127.0.0.1 - - [26/Nov/2025 10:59:39] "[33mPOST /data%0A%0A%0A%0A%0A%0A HTTP/1.1[0m" 404 -
+2025-11-26 11:01:47,104 - INFO - 127.0.0.1 - - [26/Nov/2025 11:01:47] "[33mGET /data%0A%0A%0A%0A%0A%0A HTTP/1.1[0m" 404 -
+2025-11-26 11:03:12,193 - INFO - GET /data
+2025-11-26 11:03:12,194 - INFO - Loaded data from file
+2025-11-26 11:03:12,194 - INFO - 127.0.0.1 - - [26/Nov/2025 11:03:12] "GET /data HTTP/1.1" 200 -
+2025-11-26 11:03:18,774 - INFO - POST /data
+2025-11-26 11:03:18,775 - INFO - Collecting system info
+2025-11-26 11:03:19,776 - INFO - CPU Usage: 6.6% | RAM Usage: 90.9%
+2025-11-26 11:03:19,776 - INFO - Loaded data from file
+2025-11-26 11:03:19,776 - INFO - Data saved to file successfully
+2025-11-26 11:03:19,776 - INFO - Saved new system stats entry
+2025-11-26 11:03:19,777 - INFO - 127.0.0.1 - - [26/Nov/2025 11:03:19] "[35m[1mPOST /data HTTP/1.1[0m" 201 -
+2025-11-26 11:03:49,261 - INFO - 127.0.0.1 - - [26/Nov/2025 11:03:49] "[33mPOST /data/metrics HTTP/1.1[0m" 404 -
+2025-11-26 11:03:52,459 - INFO - 127.0.0.1 - - [26/Nov/2025 11:03:52] "[33mGET /data/metrics HTTP/1.1[0m" 404 -
+2025-11-26 11:04:16,586 - INFO - GET /api/metrics
+2025-11-26 11:04:16,586 - INFO - Collecting system info
+2025-11-26 11:04:17,587 - INFO - CPU Usage: 6.0% | RAM Usage: 91.8%
+2025-11-26 11:04:17,587 - INFO - 127.0.0.1 - - [26/Nov/2025 11:04:17] "GET /api/metrics HTTP/1.1" 200 -
+2025-11-26 11:06:22,891 - INFO - GET /api/container-metrics
+2025-11-26 11:06:22,892 - INFO - Container stats requested, but Docker not implemented yet
+2025-11-26 11:06:22,892 - INFO - 127.0.0.1 - - [26/Nov/2025 11:06:22] "GET /api/container-metrics HTTP/1.1" 200 -
+2025-11-26 11:07:49,015 - INFO - GET /api/metrics
+2025-11-26 11:07:49,015 - INFO - Collecting system info
+2025-11-26 11:07:50,016 - INFO - CPU Usage: 8.6% | RAM Usage: 88.9%
+2025-11-26 11:07:50,016 - INFO - 127.0.0.1 - - [26/Nov/2025 11:07:50] "GET /api/metrics HTTP/1.1" 200 -
+2025-11-26 11:07:52,731 - INFO - GET /api/metrics
+2025-11-26 11:07:52,731 - INFO - Collecting system info
+2025-11-26 11:07:53,732 - INFO - CPU Usage: 5.7% | RAM Usage: 88.9%
+2025-11-26 11:07:53,732 - INFO - 127.0.0.1 - - [26/Nov/2025 11:07:53] "GET /api/metrics HTTP/1.1" 200 -
+2025-11-26 11:08:03,096 - INFO - GET /api/metrics
+2025-11-26 11:08:03,096 - INFO - Collecting system info
+2025-11-26 11:08:04,097 - INFO - CPU Usage: 6.8% | RAM Usage: 88.7%
+2025-11-26 11:08:04,097 - INFO - 127.0.0.1 - - [26/Nov/2025 11:08:04] "GET /api/metrics HTTP/1.1" 200 -
+2025-11-26 11:09:03,316 - INFO - GET /api/metrics
+2025-11-26 11:09:03,316 - INFO - Collecting system info
+2025-11-26 11:09:04,317 - INFO - CPU Usage: 4.3% | RAM Usage: 88.9%
+2025-11-26 11:09:04,317 - INFO - 127.0.0.1 - - [26/Nov/2025 11:09:04] "GET /api/metrics HTTP/1.1" 200 -
+2025-11-27 10:57:05,929 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://145.93.33.177:5001
+2025-11-27 10:57:05,929 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-27 10:57:29,719 - INFO - GET /api/metrics
+2025-11-27 10:57:29,719 - INFO - Collecting system info
+2025-11-27 10:57:30,723 - INFO - CPU Usage: 11.5% | RAM Usage: 83.1%
+2025-11-27 10:57:30,724 - INFO - 127.0.0.1 - - [27/Nov/2025 10:57:30] "GET /api/metrics HTTP/1.1" 200 -
+2025-11-27 11:08:33,402 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://145.93.33.177:5001
+2025-11-27 11:08:33,402 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-27 11:09:16,199 - INFO - Home endpoint accessed
+2025-11-27 11:09:16,199 - INFO - 127.0.0.1 - - [27/Nov/2025 11:09:16] "GET / HTTP/1.1" 200 -
+2025-11-27 11:09:16,217 - INFO - 127.0.0.1 - - [27/Nov/2025 11:09:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

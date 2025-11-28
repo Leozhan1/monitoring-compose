@@ -14,7 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose your API port (change if your API uses a different port)
-EXPOSE 5000
+EXPOSE 5001
 
 # Command to start the API
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]
+#CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]

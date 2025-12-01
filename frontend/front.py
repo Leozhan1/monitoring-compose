@@ -3,12 +3,9 @@ import requests
 import os
 import logging
 
-
 app = Flask(__name__)
 app.config["DEBUG"] = True
-# -----------------------------
-# Logging configuration
-# -----------------------------
+
 logging.basicConfig(
     filename="frontend.log",
     level=logging.DEBUG,
@@ -27,8 +24,13 @@ from config import (
     get_google_provider_cfg,
     CONTAINER_METRICS_URL
 )
+
 @app.route("/")
 def index():
+    if "user" not in session:
+        logging.info("Unauthenticated user → redirecting to /login")
+        return redirect("/login")
+
     try:
         host_response = requests.get("http://backend:5000/api/metrics", timeout=5)
         container_response = requests.get("http://backend:5000/api/container-metrics", timeout=5)
@@ -36,7 +38,6 @@ def index():
         metrics = host_response.json()
         containers = container_response.json()
 
-        # 🔥 Convert dicts to objects so Jinja can render properly
         class Obj(dict):
             __getattr__ = dict.get
 
@@ -50,6 +51,7 @@ def index():
         )
 
     except Exception as e:
+        logging.error(f"Frontend error: {e}")
         return f"Frontend error: {e}"
 
 @app.route("/login")
@@ -68,7 +70,6 @@ def login():
 
     logging.debug(f"Redirecting user to Google OAuth: {request_uri}")
     return redirect(request_uri)
-
 
 @app.route("/auth/callback")
 def callback():
@@ -108,9 +109,11 @@ def callback():
 
     return redirect("/")
 
-
 @app.route("/containers")
 def show_container_metrics():
+    if "user" not in session:
+        return redirect("/login")
+
     logging.info("User accessed /containers")
 
     try:
@@ -123,6 +126,12 @@ def show_container_metrics():
     except Exception as e:
         logging.error(f"Error loading container metrics: {e}")
         return f"Error: {e}"
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    logging.info("User logged out")
+    return redirect("/login")
 
 if __name__ == "__main__":
     logging.info("Starting Flask app on port 8000")
